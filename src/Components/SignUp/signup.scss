@@ -1,0 +1,50 @@
+.signup-section {
+  max-width: 400px;
+  margin: 50px auto; /* Centers the section vertically and horizontally */
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.9); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  // background-image: url('path/to/your/background-image.jpg'); /* Add your background image here */
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the background image */
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    margin-bottom: 15px;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .error-message {
+    color: red;
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
