@@ -1,0 +1,166 @@
+.header {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(221, 223, 225, 0.904);
+
+        .logo {
+                color: rgb(10, 9, 9);
+                gap: 5px;
+                font-weight: 600;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                h1{
+                        font-family:Arial, Helvetica, sans-serif;
+                }
+                .icon {
+                        font-size: 25px;
+                        color: rgb(48, 133, 170);
+                        transform: translateY(5px);
+                }
+        }
+        @media screen and (max-width:768px) {
+                .navBar {
+                        background-color: black;
+                        position: absolute;
+                        background: rgb(227, 226, 224);
+                        height: max-content;
+                        width: 88%;
+                        border-radius: 1rem;
+                        top: -500rem;
+                        left: 50%;
+                        transform: translate(-50%);
+                        z-index: 2000;
+                        box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+                        transition: .3s ease-in-out;
+        
+                        .navLists {
+                                flex-direction: column;
+                                flex-direction: center;
+                                width: 100%;
+                                margin: auto;
+                                padding: 1rem 0;
+        
+                                .navItems {
+                                        flex-direction: column;
+                                        padding: .5rem 0;
+                                }
+        
+                                .navLink {
+                                        color: rgb(88, 86, 86);
+                                        font-size: 1.2rem;
+                                        font-weight: 600;
+        
+                                        &hover {
+                                                color: rgb(0, 0, 0);
+                                        }
+                                }
+                        }
+        
+                        .btn {
+                                margin-top: 1rem;
+        
+                                a {
+                                        font-weight: 600;
+                                        color: white;
+        
+                                }
+                        }
+        
+                        .closeNavBar {
+                                position: absolute;
+                                top: 1rem;
+                                right: 1.5rem;
+                                color: rgb(48, 133, 170);
+        
+                                &:hover {
+                                        color: rgb(5, 47, 74);
+                                }
+        
+                        }
+        
+                }
+        
+                .activeNavBar {
+                        top: 7rem;
+                }
+                .removeNavBar{
+                        top: -500rem;
+                }
+        }
+        
+        
+        .toggleNavBar {
+                .icon {
+                        font-size: 25px;
+                        color: black;
+                        font-weight: 600;
+        
+                        &:hover {
+                                color: rgb(48, 133, 170);
+                        }
+                }
+        }
+}
+
+@media screen and (min-width:769px) {
+        .toggleNavBar,.closeNavBar{
+                display: none;
+
+        }
+        .header{
+                padding: 1.5rem 2rem;
+                .navBar{
+                        .navLists{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: row;
+                        .navItems{
+                                .navLink{
+                                        color: black;
+                                        padding: 0 0.45rem;
+                                        font-size: 1rem;
+                                        font-weight: 500;
+
+                                        &:hover{
+                                                color: rgb(16, 156, 225);
+                                        }
+
+                                }
+                        }
+                        .btn{
+                                margin-left: 1rem;
+                                a{
+                                        color: white;
+                                        font-weight: 500;
+                                }
+                        }
+                        }
+                }
+        }
+}
+
+@media  screen and (min-width:960px) {
+        .header{
+                .navBar{
+                        .navLists{
+                                .navItems{
+                                        padding: 0 0.7rem;
+                                }
+                        }
+                }
+        }
+}
+
+@media  screen and (min-width:1240) {
+        .header{
+               padding: 1rem 8.5rem;
+        }
+}
